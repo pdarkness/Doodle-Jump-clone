@@ -2,7 +2,7 @@
 
 define(['controls'], function(controls) {
 
-  var PLAYER_SPEED = 200;
+  var PLAYER_SPEED = 350;
 
   var Player = function(el) {
     this.el = el;
@@ -18,6 +18,13 @@ define(['controls'], function(controls) {
       this.vel.x = -PLAYER_SPEED;
     } else {
       this.vel.x = 0;
+    }
+    if (controls.keys.up) {
+        this.vel.y = -PLAYER_SPEED
+    } else if (controls.keys.down) {
+        this.vel.y = PLAYER_SPEED
+    } else {
+        this.vel.y = 0;
     }
 
     this.pos.x += delta * this.vel.x;

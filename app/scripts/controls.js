@@ -36,7 +36,6 @@ define([], function() {
       this.keys[keyName] = false;
     }
   };
-  
   // Export singleton.
   return new Controls();
 });
