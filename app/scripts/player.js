@@ -3,7 +3,7 @@
 define(['controls'], function(controls) {
 
     var PLAYER_SPEED = 350;
-    var GRAVITY = 5000;
+    var GRAVITY = 50000;
 
     var Player = function(el) {
     this.el = el;
@@ -21,18 +21,22 @@ Player.prototype.onFrame = function(delta) {
     this.vel.x = 0;
     }
     if (controls.keys.up) {
-    this.vel.y = -PLAYER_SPEED
+    //this.vel.y = -PLAYER_SPEED
     } else if (controls.keys.down) {
     this.vel.y = PLAYER_SPEED
     } else {
     this.vel.y = 0;
+    if (controls.keys.space && this.pos.y ===0) {
+        this.pos.y -= 200;
+    }
 }
 
 this.vel.y += GRAVITY * delta;
 
 this.pos.x += delta * this.vel.x;
 this.pos.y += delta * this.vel.y;
-
+if (this.pos.y > 0)
+    this.pos.y = 0;
 
     // Update UI
     this.el.css('transform', 'translate3d(' + this.pos.x + 'px,' + this.pos.y + 'px,0)');
