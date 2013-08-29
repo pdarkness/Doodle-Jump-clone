@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94900833-ccf7-448f-a5b0-16d6838b16fc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controls.js" afterPath="$PROJECT_DIR$/app/scripts/controls.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.scss" afterPath="$PROJECT_DIR$/app/styles/main.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/player.js" afterPath="$PROJECT_DIR$/app/scripts/player.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Doodle-Jump-clone.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377731463139" ignored="false" />
+    <file path="/Dummy.txt" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377736494922" ignored="false" />
     <file path="/main.scss" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377736103565" ignored="false" />
     <file path="/index.html" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377734745643" ignored="false" />
     <file path="$PROJECT_DIR$/../html5-game/app/scripts/enemy.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377732433951" ignored="false" />
-    <file path="/player.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377736348292" ignored="false" />
+    <file path="/player.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377737028020" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +34,7 @@
       <file leaf-file-name="player.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="21" selection-start="570" selection-end="570" vertical-scroll-proportion="0.4478595">
+            <state line="4" column="21" selection-start="84" selection-end="84" vertical-scroll-proportion="0.07464325">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -302,12 +299,18 @@
       <created>1377729307922</created>
       <updated>1377729307922</updated>
     </task>
+    <task id="LOCAL-00001" summary="The fly box!">
+      <created>1377736508921</created>
+      <updated>1377736508921</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="5" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -368,7 +371,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="The fly box!" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -382,6 +385,7 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="The fly box!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -435,7 +439,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="21" selection-start="570" selection-end="570" vertical-scroll-proportion="0.4478595">
+        <state line="4" column="21" selection-start="84" selection-end="84" vertical-scroll-proportion="0.07464325">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
