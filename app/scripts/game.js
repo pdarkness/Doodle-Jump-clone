@@ -90,7 +90,6 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
 
     Game.prototype.gameOver = function() {
         this.freezeGame();
-
         //alert('You are game over! Sorry man...');
         var game = this;
         setTimeout(function() {

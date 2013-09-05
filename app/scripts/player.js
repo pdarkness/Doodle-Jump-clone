@@ -60,7 +60,6 @@ define(['controls'], function(controls) {
         if (this.pos.y > HELL_Y) {
             this.game.gameOver();
         }
-
     };
 
     Player.prototype.checkPlatforms = function(oldY) {

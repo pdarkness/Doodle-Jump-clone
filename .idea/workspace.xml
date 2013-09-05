@@ -10,12 +10,12 @@
     </list>
     <ignored path="Doodle-Jump-clone.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378378775718" ignored="false" />
-    <file path="/main.scss" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378422003538" ignored="false" />
-    <file path="/index.html" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378421712293" ignored="false" />
+    <file path="/Dummy.txt" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378423004181" ignored="false" />
+    <file path="/main.scss" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378423385515" ignored="false" />
+    <file path="/index.html" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378423354734" ignored="false" />
     <file path="$PROJECT_DIR$/../html5-game/app/scripts/enemy.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377732433951" ignored="false" />
     <file path="/player.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378420292527" ignored="false" />
-    <file path="/game.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378422821047" ignored="false" />
+    <file path="/game.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378423870453" ignored="false" />
     <file path="/platform.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377797800526" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +39,7 @@
       <file leaf-file-name="player.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="0" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.0">
+            <state line="58" column="0" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -48,7 +48,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="34" selection-start="797" selection-end="797" vertical-scroll-proportion="-13.730769">
+            <state line="21" column="45" selection-start="808" selection-end="808" vertical-scroll-proportion="-13.730769">
               <folding />
             </state>
           </provider>
@@ -57,7 +57,7 @@
       <file leaf-file-name="main.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
+            <state line="10" column="14" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -66,7 +66,7 @@
       <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="43" selection-start="4048" selection-end="4048" vertical-scroll-proportion="2.440678">
+            <state line="92" column="10" selection-start="2338" selection-end="2338" vertical-scroll-proportion="0.21642764">
               <folding />
             </state>
           </provider>
@@ -351,7 +351,11 @@
       <created>1378378781247</created>
       <updated>1378378781247</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Viewport changes">
+      <created>1378423009358</created>
+      <updated>1378423009358</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -419,7 +423,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="smá fix á hvar hlutir eru staðsettir" />
+    <option name="LAST_COMMIT_MESSAGE" value="Viewport changes" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -438,6 +442,7 @@
     <MESSAGE value="box" />
     <MESSAGE value="Fullt stolið frá kennara og final fyrir skil =)" />
     <MESSAGE value="smá fix á hvar hlutir eru staðsettir" />
+    <MESSAGE value="Viewport changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -511,27 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="34" selection-start="797" selection-end="797" vertical-scroll-proportion="-13.730769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="0" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/platform.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="24" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
@@ -546,9 +530,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="45" selection-start="808" selection-end="808" vertical-scroll-proportion="-13.730769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="14" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="43" selection-start="4048" selection-end="4048" vertical-scroll-proportion="2.440678">
+        <state line="92" column="10" selection-start="2338" selection-end="2338" vertical-scroll-proportion="0.21642764">
           <folding />
         </state>
       </provider>
