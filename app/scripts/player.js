@@ -16,7 +16,7 @@ define(['controls'], function(controls) {
     };
 
     Player.prototype.reset = function() {
-        this.pos = { x: 200, y: 400 };
+        this.pos = { x: 100, y: 400 };
         this.vel = { x: 0, y: 0 };
     }
 

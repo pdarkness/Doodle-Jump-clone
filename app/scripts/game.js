@@ -40,7 +40,7 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
     Game.prototype.createWorld = function() {
         // Ground
         this.addPlatform(new Platform({
-            x: 100,
+            x: 0,
             y: 418,
             width: 800,
             height: 10
@@ -72,10 +72,10 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
             height: 10
         }));
 
-        this.addEnemy(new Enemy({
+       /* this.addEnemy(new Enemy({
             start: {x: 400, y: 350},
             end: {x: 400, y: 200}
-        }));
+        }));*/
     };
 
     Game.prototype.addPlatform = function(platform) {
