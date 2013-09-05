@@ -8,7 +8,7 @@ define(['controls'], function(controls) {
     var PLAYER_HALF_WIDTH = 14;
     var PLAYER_RADIUS = 30;
 
-    var HELL_Y = 500;
+    var HELL_Y = 600;
 
     var Player = function(el, game) {
         this.game = game;
@@ -26,8 +26,16 @@ define(['controls'], function(controls) {
 
         // Jumping
         if ( this.vel.y === 0) {
+
             this.vel.y = -JUMP_VELOCITY;
         }
+
+        if (this.pos.x < 0)
+            this.pos.x = 400;
+
+        if (this.pos.x > 400)
+            this.pos.x = 0;
+
 
         // Gravity
         this.vel.y += GRAVITY * delta;
@@ -45,13 +53,14 @@ define(['controls'], function(controls) {
         this.el.css('transform', 'translate3d(' + this.pos.x + 'px,' + this.pos.y + 'px,0)');
 
         this.el.toggleClass('jumping', this.vel.y < 0);
-        this.el.toggleClass('walking', this.vel.x !== 0);
     };
 
     Player.prototype.checkGameOver = function() {
+
         if (this.pos.y > HELL_Y) {
             this.game.gameOver();
         }
+
     };
 
     Player.prototype.checkPlatforms = function(oldY) {

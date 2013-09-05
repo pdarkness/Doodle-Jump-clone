@@ -40,29 +40,29 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
     Game.prototype.createWorld = function() {
         // Ground
         this.addPlatform(new Platform({
-            x: 0,
-            y: 418,
-            width: 800,
+            x: 90,
+            y: 350,
+            width: 400,
             height: 10
         }));
 
         // Floating platforms
         this.addPlatform(new Platform({
-            x: 300,
+            x: 330,
             y: 258,
-            width: 100,
+            width: 70,
             height: 10
         }));
         this.addPlatform(new Platform({
-            x: 500,
+            x: 0,
             y: 288,
-            width: 100,
+            width: 70,
             height: 10
         }));
         this.addPlatform(new Platform({
-            x: 400,
-            y: 158,
-            width: 100,
+            x: 70,
+            y: 38,
+            width: 70,
             height: 10
         }));
         this.addPlatform(new Platform({
@@ -90,8 +90,8 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
 
     Game.prototype.gameOver = function() {
         this.freezeGame();
-        alert('You are game over! Sorry man...');
 
+        //alert('You are game over! Sorry man...');
         var game = this;
         setTimeout(function() {
             game.start();
@@ -128,16 +128,30 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
     };
 
     Game.prototype.updateViewport = function() {
-        var minX = this.viewport.x + VIEWPORT_PADDING;
-        var maxX = this.viewport.x + this.viewport.width - VIEWPORT_PADDING;
+        var minY = this.viewport.y + VIEWPORT_PADDING;
+        var maxY = this.viewport.y + this.viewport.height - VIEWPORT_PADDING;
 
+        //var minX = this.viewport.x + VIEWPORT_PADDING;
+        //var maxX = this.viewport.x + this.viewport.width - VIEWPORT_PADDING;
+
+        var playerY = this.player.pos.y;
         var playerX = this.player.pos.x;
 
         // Update the viewport if needed.
-        if (playerX < minX) {
+        /*if (playerX < minX) {
             this.viewport.x = playerX - VIEWPORT_PADDING;
         } else if (playerX > maxX) {
             this.viewport.x = playerX - this.viewport.width + VIEWPORT_PADDING;
+        }*/
+        //console.log(this.player.pos.y);
+
+        if (playerY < minY) {
+            this.viewport.y = playerY - VIEWPORT_PADDING;
+        } else if (playerY > maxY) {
+            this.viewport.y = playerY - this.viewport.height + VIEWPORT_PADDING;
+            if ((-this.viewport.y)>300)
+                this.gameOver();
+
         }
 
         this.worldEl.css({
@@ -157,7 +171,7 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         // Set the stage.
         this.createWorld();
         this.player.reset();
-        this.viewport = {x: 100, y: 0, width: 800, height: 600};
+        this.viewport = {x: 0, y: 0, width: 400, height: 500};
 
         // Then start.
         this.unFreezeGame();
