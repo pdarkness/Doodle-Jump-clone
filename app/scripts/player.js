@@ -2,8 +2,8 @@
 
 define(['controls'], function(controls) {
 
-    var PLAYER_SPEED = 400;
-    var JUMP_VELOCITY = 1300;
+    var PLAYER_SPEED = 410;
+    var JUMP_VELOCITY = 1600;
     var GRAVITY = 4000;
     var PLAYER_HALF_WIDTH = 14;
     var PLAYER_RADIUS = 30;
@@ -69,6 +69,9 @@ define(['controls'], function(controls) {
     Player.prototype.checkGameOver = function() {
         if (this.pos.y > HELL_Y - Math.floor(this.maxScore)) {
             this.game.gameOver();
+        }
+        if (this.pos.y < 0) {
+            this.game.levelOver();
         }
     };
 

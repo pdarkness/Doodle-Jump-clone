@@ -2,7 +2,7 @@
 
 define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, Enemy, controls) {
 
-    var VIEWPORT_PADDING = 100;
+    var VIEWPORT_PADDING = 230;
 
     /**
      * Main game class.
@@ -18,6 +18,8 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         this.worldEl = el.find('.world');
         this.gameOvEl = el.find('.gameOver');
         this.isPlaying = false;
+        this.gameScore = 0;
+        this.level = 1;
 
         this.sound = new Howl({
             urls: ['/sounds/jump.mp3', '/sounds/jump.ogg']
@@ -44,12 +46,22 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
 
     Game.prototype.createWorld = function() {
         // Ground
-        for(i=0;i<100;i++){
+        for(i=0;i<150-this.level*2;i++){
+            //console.log(this.level(this.level));
             this.addPlatform(new Platform({
-                x: (i*58321)% 300,
-                y: (i*49331)%5800,
+                x: (Math.random()*1000*423)% 300,
+                y: (Math.random()*1000*593)%6200,
                 width: 80,
                 height: 10
+            }));
+        }
+
+        for (i=0;i<2+this.level;i++){
+            var mod = (Math.random()*1000*423)%400;
+            var modY = (Math.random()*1000*423)%6000;
+            this.addEnemy(new Enemy({
+                start: {x: mod, y: modY},
+                end: {x: mod-150, y: modY-100}
             }));
         }
 
@@ -58,13 +70,6 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
             y: 5900,
             width: 600,
             height: 10
-        }));
-
-
-
-        this.addEnemy(new Enemy({
-            start: {x: 300, y: 350},
-            end: {x: 300, y: 200}
         }));
     };
 
@@ -81,7 +86,27 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
     Game.prototype.gameOver = function() {
         this.freezeGame();
 
-        alert('Game Over! Score: ' + Math.floor(this.player.maxScore));
+        if (this.gameScore === 0){
+            alert('Game Over! Score: ' + Math.floor(this.player.maxScore));
+        }
+        else{
+            alert('Game Over! Score: ' + (this.gameScore+ Math.floor(this.player.maxScore)));
+        }
+        this.gameScore = 0;
+        this.level = 1;
+
+        var game = this;
+        setTimeout(function() {
+            game.start();
+        }, 0);
+    };
+
+    Game.prototype.levelOver = function() {
+        this.freezeGame();
+        this.gameScore += Math.floor(this.player.maxScore);
+        this.level += 1;
+
+        alert('Level Complete! Your Score now : ' + this.gameScore);
 
         var game = this;
         setTimeout(function() {
