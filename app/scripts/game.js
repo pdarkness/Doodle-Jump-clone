@@ -44,6 +44,15 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
 
     Game.prototype.createWorld = function() {
         // Ground
+        for(i=0;i<100;i++){
+            this.addPlatform(new Platform({
+                x: (i*58321)% 300,
+                y: (i*49331)%5800,
+                width: 80,
+                height: 10
+            }));
+        }
+
         this.addPlatform(new Platform({
             x: 90,
             y: 5900,
@@ -51,71 +60,12 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
             height: 10
         }));
 
-        this.addPlatform(new Platform({
-            x: 200,
-            y: 5700,
-            width: 100,
-            height: 10
-        }));
 
-        this.addPlatform(new Platform({
-            x: 90,
-            y: 5500,
-            width: 100,
-            height: 10
-        }));
 
-        this.addPlatform(new Platform({
-            x: 290,
-            y: 5300,
-            width: 100,
-            height: 10
+        this.addEnemy(new Enemy({
+            start: {x: 300, y: 350},
+            end: {x: 300, y: 200}
         }));
-
-        this.addPlatform(new Platform({
-            x: 290,
-            y: 5400,
-            width: 100,
-            height: 10
-        }));
-
-        this.addPlatform(new Platform({
-            x: 90,
-            y: 350,
-            width: 200,
-            height: 10
-        }));
-
-        // Floating platforms
-        this.addPlatform(new Platform({
-            x: 330,
-            y: 258,
-            width: 70,
-            height: 10
-        }));
-        this.addPlatform(new Platform({
-            x: 0,
-            y: 288,
-            width: 70,
-            height: 10
-        }));
-        this.addPlatform(new Platform({
-            x: 70,
-            y: 38,
-            width: 70,
-            height: 10
-        }));
-        this.addPlatform(new Platform({
-            x: 750,
-            y: 188,
-            width: 100,
-            height: 10
-        }));
-
-       /* this.addEnemy(new Enemy({
-            start: {x: 400, y: 350},
-            end: {x: 400, y: 200}
-        }));*/
     };
 
     Game.prototype.addPlatform = function(platform) {

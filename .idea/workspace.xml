@@ -2,28 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94900833-ccf7-448f-a5b0-16d6838b16fc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/_animations.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/_player.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Doodle-Jump-clone.iml" afterPath="$PROJECT_DIR$/.idea/Doodle-Jump-clone.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/_player.scss" afterPath="$PROJECT_DIR$/app/styles/_player.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controls.js" afterPath="$PROJECT_DIR$/app/scripts/controls.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/game.js" afterPath="$PROJECT_DIR$/app/scripts/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.scss" afterPath="$PROJECT_DIR$/app/styles/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/player.js" afterPath="$PROJECT_DIR$/app/scripts/player.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Doodle-Jump-clone.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378569011021" ignored="false" />
-    <file path="/main.scss" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378572777955" ignored="false" />
+    <file path="/Dummy.txt" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378577000498" ignored="false" />
+    <file path="/main.scss" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378586444611" ignored="false" />
     <file path="/index.html" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378576661959" ignored="false" />
     <file path="$PROJECT_DIR$/../html5-game/app/scripts/enemy.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377732433951" ignored="false" />
     <file path="/player.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378576465460" ignored="false" />
-    <file path="/game.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378576363269" ignored="false" />
+    <file path="/game.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378584001608" ignored="false" />
     <file path="/platform.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377797800526" ignored="false" />
-    <file path="/_player.scss" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378574553920" ignored="false" />
+    <file path="/_player.scss" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378582334163" ignored="false" />
     <file path="/bower.json" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378575805049" ignored="false" />
     <file path="/a.dummy" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378576158585" ignored="false" />
+    <file path="/controls.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378585946413" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,10 +58,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="main.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="9" selection-start="522" selection-end="522" vertical-scroll-proportion="0.7417453">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="_player.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/_player.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="17" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
+            <state line="8" column="0" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -73,16 +79,7 @@
       <file leaf-file-name=".bower.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bower_components/howler/.bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bower.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bower.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="31" selection-start="216" selection-end="216" vertical-scroll-proportion="0.16545013">
+            <state line="14" column="1" selection-start="380" selection-end="380" vertical-scroll-proportion="-9.153846">
               <folding />
             </state>
           </provider>
@@ -91,34 +88,16 @@
       <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="58" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
+            <state line="19" column="31" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_animations.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/styles/_animations.scss">
+      <file leaf-file-name="transf.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/transf.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enemy.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/enemy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="18" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="platform.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/platform.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="24" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
+            <state line="26" column="4" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,7 +106,7 @@
       <file leaf-file-name="controls.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controls.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="50" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
+            <state line="72" column="9" selection-start="1740" selection-end="1740" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -154,15 +133,16 @@
         <option value="$PROJECT_DIR$/app/styles/main.css" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/.editorconfig" />
-        <option value="$PROJECT_DIR$/app/scripts/controls.js" />
         <option value="$PROJECT_DIR$/app/scripts/platform.js" />
         <option value="$PROJECT_DIR$/app/styles/_animations.scss" />
-        <option value="$PROJECT_DIR$/app/styles/main.scss" />
-        <option value="$PROJECT_DIR$/app/styles/_player.scss" />
-        <option value="$PROJECT_DIR$/app/scripts/game.js" />
         <option value="$PROJECT_DIR$/app/scripts/player.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/app/styles/_player.scss" />
+        <option value="$PROJECT_DIR$/app/scripts/game.js" />
+        <option value="$PROJECT_DIR$/transf.txt" />
+        <option value="$PROJECT_DIR$/app/scripts/controls.js" />
+        <option value="$PROJECT_DIR$/app/styles/main.scss" />
       </list>
     </option>
   </component>
@@ -227,6 +207,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Doodle-Jump-clone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Doodle-Jump-clone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -396,7 +394,11 @@
       <created>1378569014519</created>
       <updated>1378569014519</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Howler EventEmitter2 og jump sound installed">
+      <created>1378577004846</created>
+      <updated>1378577004846</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -464,7 +466,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="farid ad haga sér meira eins og leikur" />
+    <option name="LAST_COMMIT_MESSAGE" value="Howler EventEmitter2 og jump sound installed" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -486,18 +488,12 @@
     <MESSAGE value="Viewport changes" />
     <MESSAGE value="eitthvad..." />
     <MESSAGE value="farid ad haga sér meira eins og leikur" />
+    <MESSAGE value="Howler EventEmitter2 og jump sound installed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/scripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controls.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="4" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0">
@@ -524,13 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="50" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -545,44 +534,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="14" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/_player.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/howler/.bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="14" column="1" selection-start="380" selection-end="380" vertical-scroll-proportion="-9.153846">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/_animations.scss">
+    <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="58" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="35" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="-8.5">
           <folding />
         </state>
       </provider>
@@ -594,9 +555,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
+    <entry file="file://$PROJECT_DIR$/app/styles/_player.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="31" selection-start="216" selection-end="216" vertical-scroll-proportion="0.16545013">
+        <state line="8" column="0" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="31" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="35" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/_animations.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transf.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="4" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="9" selection-start="1740" selection-end="1740" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="9" selection-start="522" selection-end="522" vertical-scroll-proportion="0.7417453">
           <folding />
         </state>
       </provider>

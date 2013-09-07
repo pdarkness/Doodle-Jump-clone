@@ -6,6 +6,7 @@
   margin-top: -100px;
   width: 65px;
   height: 60px;
+
   @include border-radius(10px);
 
   div {margin: 0; padding: 0;}
@@ -29,7 +30,7 @@
   }
 
    .r_Eye {
-    background: #fff;
+    background: #000;
     width: 50px; height: 50px;
     position: absolute; top: 42px;
 
@@ -37,11 +38,21 @@
   }
 
   .l_Eye {
-    background: #fff;
+    background: #000;
     width: 50px; height: 50px;
-    position: absolute; top: 22px;
+    position: absolute; top: 42px;
 
     @include border-radius(10px);
+  }
+
+  &.jumping .l_Eye {
+    top: 72px;
+    @include border-radius(50px);
+  }
+
+  &.jumping .r_Eye {
+    top: 72px;
+    @include border-radius(50px);
   }
 
   .l_Eye {left: 50px; background: #00000;}
@@ -51,7 +62,8 @@
     width: 320px; height: 324px;
     top: 40px;
 
-    @include border-radius(0 0 25px 25px);
+    @include border-radius(50px 50px 25px 25px);
   }
+  
 
 }
