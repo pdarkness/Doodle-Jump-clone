@@ -1,5 +1,5 @@
 @import "compass/css3";
-
+@import "_animations";
 
 .game {
   width: 400px;
@@ -30,18 +30,6 @@
   width: 100%;
 }
 
-.player {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  margin-left: -30px;
-  margin-top: -60px;
-  width: 65px;
-  height: 60px;
-  background: url('../images/box.png') 50% 50% / contain no-repeat;
-  @include border-radius(110px 110px 150px 150px);
-}
-
 .enemy {
   position: absolute;
   height: 75px;
@@ -62,3 +50,5 @@
     background: #ba4a55;
     @include border-radius(10px);
 }
+
+@import "_player";

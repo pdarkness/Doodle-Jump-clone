@@ -13,6 +13,9 @@
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/eventemitter2/lib/eventemitter2.js"></script>
+        <script src="bower_components/howler/howler.js"></script>
+
         <!-- endbuild -->
     </head>
     <body>
@@ -23,7 +26,20 @@
                 <div class="gameOver"></div>
                     <div class="platforms"></div>
                     <div class="entities"></div>
-                    <div class="player"></div>
+                    <div class="player">
+                        <div class="jumper">
+                            <div class="head">
+                                <div class="l_Eye"></div>
+                                <div class="r_Eye"></div>
+                            </div>
+                            <div class="body">
+                                <div class="l_Arm"></div>
+                                <div class="r_Arm"></div>
+                                <div class="l_Leg"></div>
+                                <div class="r_Leg"></div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>

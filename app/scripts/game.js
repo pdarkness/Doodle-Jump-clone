@@ -16,8 +16,12 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         this.platformsEl = el.find('.platforms');
         this.entitiesEl = el.find('.entities');
         this.worldEl = el.find('.world');
-        this.gameOvEl = el.find('gameOver');
+        this.gameOvEl = el.find('.gameOver');
         this.isPlaying = false;
+
+        this.sound = new Howl({
+            urls: ['/sounds/jump.mp3', '/sounds/jump.ogg']
+        })
 
         // Cache a bound onFrame since we need it each frame.
         this.onFrame = this.onFrame.bind(this);
@@ -181,7 +185,6 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         } else if (playerX > maxX) {
             this.viewport.x = playerX - this.viewport.width + VIEWPORT_PADDING;
         }*/
-        //console.log(this.player.pos.y);
 
 
         if (playerY < minY) {
@@ -196,7 +199,7 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
             top: -this.viewport.y
         });
 
-        //console.log("hmm: " + this.worldEl.css.top);
+
     };
 
     /**

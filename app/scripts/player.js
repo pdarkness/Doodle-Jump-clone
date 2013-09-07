@@ -29,6 +29,8 @@ define(['controls'], function(controls) {
         // Jumping
         if ( this.vel.y === 0) {
             this.vel.y = -JUMP_VELOCITY;
+
+            this.game.sound.play();
         }
 
         if (this.pos.x < 0)
@@ -37,8 +39,8 @@ define(['controls'], function(controls) {
         if (this.pos.x > 400)
             this.pos.x = 0;
 
-        console.log(this.pos.y);
-        console.log(HELL_Y - this.maxScore);
+        //console.log(this.pos.y);
+        //console.log(HELL_Y - this.maxScore);
 
         // Gravity
         this.vel.y += GRAVITY * delta;

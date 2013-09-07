@@ -1,11 +1,13 @@
 {
-  "name": "html5-game",
-  "version": "0.0.0",
+  "name": "Doodle-Jump-clone",
+  "version": "0.1.2",
   "dependencies": {
     "sass-bootstrap": "~2.3.0",
     "requirejs": "~2.1.4",
     "modernizr": "~2.6.2",
-    "jquery": "~1.9.1"
+    "jquery": "~1.9.1",
+    "eventemitter2": "~0.4.13",
+    "howler": "~1.1.11"
   },
   "devDependencies": {}
 }
