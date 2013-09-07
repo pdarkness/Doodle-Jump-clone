@@ -10,12 +10,12 @@
     </list>
     <ignored path="Doodle-Jump-clone.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378423004181" ignored="false" />
-    <file path="/main.scss" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378423385515" ignored="false" />
-    <file path="/index.html" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378423354734" ignored="false" />
+    <file path="/Dummy.txt" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378424125616" ignored="false" />
+    <file path="/main.scss" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378568365480" ignored="false" />
+    <file path="/index.html" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378566395253" ignored="false" />
     <file path="$PROJECT_DIR$/../html5-game/app/scripts/enemy.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377732433951" ignored="false" />
-    <file path="/player.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378420292527" ignored="false" />
-    <file path="/game.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378423870453" ignored="false" />
+    <file path="/player.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378567632030" ignored="false" />
+    <file path="/game.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378568269226" ignored="false" />
     <file path="/platform.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377797800526" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +39,7 @@
       <file leaf-file-name="player.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="0" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.0">
+            <state line="34" column="29" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -48,7 +48,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="45" selection-start="808" selection-end="808" vertical-scroll-proportion="-13.730769">
+            <state line="22" column="38" selection-start="848" selection-end="848" vertical-scroll-proportion="-14.384615">
               <folding />
             </state>
           </provider>
@@ -57,7 +57,7 @@
       <file leaf-file-name="main.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="14" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
+            <state line="5" column="12" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -66,7 +66,7 @@
       <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="10" selection-start="2338" selection-end="2338" vertical-scroll-proportion="0.21642764">
+            <state line="72" column="19" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.8489647">
               <folding />
             </state>
           </provider>
@@ -131,17 +131,18 @@
         <option value="$PROJECT_DIR$/.editorconfig" />
         <option value="$PROJECT_DIR$/app/scripts/controls.js" />
         <option value="$PROJECT_DIR$/app/scripts/platform.js" />
-        <option value="$PROJECT_DIR$/app/scripts/player.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/styles/main.scss" />
+        <option value="$PROJECT_DIR$/app/scripts/player.js" />
         <option value="$PROJECT_DIR$/app/scripts/game.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="873" />
-    <option name="width" value="1047" />
-    <option name="height" value="1032" />
+    <option name="x" value="1911" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -355,18 +356,22 @@
       <created>1378423009358</created>
       <updated>1378423009358</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="eitthvad...">
+      <created>1378424130231</created>
+      <updated>1378424130231</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="873" y="0" width="1047" height="1032" extended-state="0" />
+    <frame x="1911" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33200794" sideWeight="0.6840982" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17606747" sideWeight="0.6840982" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -423,7 +428,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Viewport changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="eitthvad..." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -443,6 +448,7 @@
     <MESSAGE value="Fullt stolið frá kennara og final fyrir skil =)" />
     <MESSAGE value="smá fix á hvar hlutir eru staðsettir" />
     <MESSAGE value="Viewport changes" />
+    <MESSAGE value="eitthvad..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -509,6 +515,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/platform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controls.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="50" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
@@ -516,9 +529,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/platform.js">
+    <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
+        <state line="22" column="38" selection-start="848" selection-end="848" vertical-scroll-proportion="-14.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="12" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -530,30 +550,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="45" selection-start="808" selection-end="808" vertical-scroll-proportion="-13.730769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.0">
+        <state line="34" column="29" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="10" selection-start="2338" selection-end="2338" vertical-scroll-proportion="0.21642764">
+        <state line="72" column="19" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.8489647">
           <folding />
         </state>
       </provider>

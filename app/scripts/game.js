@@ -16,6 +16,7 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         this.platformsEl = el.find('.platforms');
         this.entitiesEl = el.find('.entities');
         this.worldEl = el.find('.world');
+        this.gameOvEl = el.find('gameOver');
         this.isPlaying = false;
 
         // Cache a bound onFrame since we need it each frame.
@@ -41,8 +42,43 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         // Ground
         this.addPlatform(new Platform({
             x: 90,
+            y: 5900,
+            width: 600,
+            height: 10
+        }));
+
+        this.addPlatform(new Platform({
+            x: 200,
+            y: 5700,
+            width: 100,
+            height: 10
+        }));
+
+        this.addPlatform(new Platform({
+            x: 90,
+            y: 5500,
+            width: 100,
+            height: 10
+        }));
+
+        this.addPlatform(new Platform({
+            x: 290,
+            y: 5300,
+            width: 100,
+            height: 10
+        }));
+
+        this.addPlatform(new Platform({
+            x: 290,
+            y: 5400,
+            width: 100,
+            height: 10
+        }));
+
+        this.addPlatform(new Platform({
+            x: 90,
             y: 350,
-            width: 400,
+            width: 200,
             height: 10
         }));
 
@@ -90,7 +126,9 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
 
     Game.prototype.gameOver = function() {
         this.freezeGame();
-        //alert('You are game over! Sorry man...');
+
+        alert('Game Over! Score: ' + Math.floor(this.player.maxScore));
+
         var game = this;
         setTimeout(function() {
             game.start();
@@ -102,6 +140,7 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
      */
     Game.prototype.onFrame = function() {
         if (!this.isPlaying) {
+
             return;
         }
 
@@ -128,7 +167,7 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
 
     Game.prototype.updateViewport = function() {
         var minY = this.viewport.y + VIEWPORT_PADDING;
-        var maxY = this.viewport.y + this.viewport.height - VIEWPORT_PADDING;
+        var maxY = this.viewport.y + this.viewport.height ;
 
         //var minX = this.viewport.x + VIEWPORT_PADDING;
         //var maxX = this.viewport.x + this.viewport.width - VIEWPORT_PADDING;
@@ -144,19 +183,20 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         }*/
         //console.log(this.player.pos.y);
 
+
         if (playerY < minY) {
             this.viewport.y = playerY - VIEWPORT_PADDING;
         } else if (playerY > maxY) {
-            this.viewport.y = playerY - this.viewport.height + VIEWPORT_PADDING;
-            if ((-this.viewport.y)>300)
-                this.gameOver();
-
+            this.viewport.y = playerY - this.viewport.height ;
         }
+
 
         this.worldEl.css({
             left: -this.viewport.x,
             top: -this.viewport.y
         });
+
+        //console.log("hmm: " + this.worldEl.css.top);
     };
 
     /**

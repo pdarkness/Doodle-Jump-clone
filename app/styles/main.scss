@@ -1,19 +1,21 @@
 @import "compass/css3";
 
-.game {
-  position: absolute;
 
-  width:400px;
-  height: 600px;
+.game {
+  width: 400px;
+  height: 520px;
+  overflow: hidden;
+  position: absolute;
 }
 
 .gameOver {
   margin-top: 0px;
-  margin-left: 600px;
+  margin-left: 50%;
   width: 300px;
   height: 200px;
   position: absolute;
   background: #000000;
+  z-index: 100;
 }
 
 .world {
@@ -24,10 +26,8 @@
 
 .background {
   background: url('http://hugoware.co/resource/images/misc/game-background.jpg');
-  position: absolute;
-  height: 800px;
-  width: 600px;
-
+  height: 6000px;
+  width: 100%;
 }
 
 .player {
@@ -58,7 +58,7 @@
     left: 0;
     top: 0;
     height: 15px;
-    margin-left: if50px;
+    margin-left: 0px;
     background: #ba4a55;
-    @include border-radius(0px);
+    @include border-radius(10px);
 }

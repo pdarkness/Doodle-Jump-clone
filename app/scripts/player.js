@@ -3,12 +3,12 @@
 define(['controls'], function(controls) {
 
     var PLAYER_SPEED = 400;
-    var JUMP_VELOCITY = 1500;
+    var JUMP_VELOCITY = 1300;
     var GRAVITY = 4000;
     var PLAYER_HALF_WIDTH = 14;
     var PLAYER_RADIUS = 30;
+    var HELL_Y = 6450;
 
-    var HELL_Y = 600;
 
     var Player = function(el, game) {
         this.game = game;
@@ -16,8 +16,10 @@ define(['controls'], function(controls) {
     };
 
     Player.prototype.reset = function() {
-        this.pos = { x: 100, y: 400 };
+        this.pos = { x: 100, y: 5900 };
         this.vel = { x: 0, y: 0 };
+        this.playerScore = 0;
+        this.maxScore = 0;
     }
 
     Player.prototype.onFrame = function(delta) {
@@ -26,7 +28,6 @@ define(['controls'], function(controls) {
 
         // Jumping
         if ( this.vel.y === 0) {
-
             this.vel.y = -JUMP_VELOCITY;
         }
 
@@ -36,6 +37,8 @@ define(['controls'], function(controls) {
         if (this.pos.x > 400)
             this.pos.x = 0;
 
+        console.log(this.pos.y);
+        console.log(HELL_Y - this.maxScore);
 
         // Gravity
         this.vel.y += GRAVITY * delta;
@@ -43,6 +46,12 @@ define(['controls'], function(controls) {
         var oldY = this.pos.y;
         this.pos.x += delta * this.vel.x;
         this.pos.y += delta * this.vel.y;
+
+
+
+        this.playerScore = Math.abs(oldY - 6000);
+        if (this.playerScore > this.maxScore)
+            this.maxScore = this.playerScore;
 
         // Collision detection
         this.checkPlatforms(oldY);
@@ -56,8 +65,7 @@ define(['controls'], function(controls) {
     };
 
     Player.prototype.checkGameOver = function() {
-
-        if (this.pos.y > HELL_Y) {
+        if (this.pos.y > HELL_Y - Math.floor(this.maxScore)) {
             this.game.gameOver();
         }
     };
