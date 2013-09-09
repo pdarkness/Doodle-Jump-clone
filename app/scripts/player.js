@@ -2,8 +2,8 @@
 
 define(['controls'], function(controls) {
 
-    var PLAYER_SPEED = 410;
-    var JUMP_VELOCITY = 1600;
+    var PLAYER_SPEED = 510;
+    var JUMP_VELOCITY = 1450;
     var GRAVITY = 4000;
     var PLAYER_HALF_WIDTH = 14;
     var PLAYER_RADIUS = 30;
@@ -29,7 +29,10 @@ define(['controls'], function(controls) {
         // Jumping
         if ( this.vel.y === 0) {
             this.vel.y = -JUMP_VELOCITY;
-
+            if(controls.keys.space)
+                this.vel.y -= 300;
+            if(controls.keys.down)
+                this.vel.y += 500;
             this.game.sound.play();
         }
 
@@ -67,7 +70,13 @@ define(['controls'], function(controls) {
     };
 
     Player.prototype.checkGameOver = function() {
-        if (this.pos.y > HELL_Y - Math.floor(this.maxScore)) {
+        /*if (this.pos.y > HELL_Y - Math.floor(this.maxScore)) {
+            this.game.gameOver();
+        }*/
+        console.log("viewport: " + this.game.viewport.y);
+        console.log("pos:    :" + this.pos.y);
+        console.log(this.pos.y- this.game.viewport.y);
+        if (this.game.viewport.y != 0 && (this.pos.y- this.game.viewport.y)>this.game.viewport.height){
             this.game.gameOver();
         }
         if (this.pos.y < 0) {
@@ -94,7 +103,7 @@ define(['controls'], function(controls) {
 
     Player.prototype.checkEnemies = function() {
         var centerX = this.pos.x;
-        var centerY = this.pos.y - 40;
+        var centerY = this.pos.y - 20;
         var that = this;
         this.game.forEachEnemy(function(enemy) {
             // Distance squared

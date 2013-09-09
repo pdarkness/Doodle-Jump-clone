@@ -1,9 +1,13 @@
 @import "compass/css3";
 @import "_animations";
 
+body {
+  background: black ;
+}
+
 .game {
   width: 400px;
-  height: 520px;
+  height: 550px;
   overflow: hidden;
   position: absolute;
 }
@@ -21,24 +25,29 @@
 .world {
   position: absolute;
   width: 800px;
-  height: 5000px;
+  height: 100%;
 }
 
 .background {
   background: url("/images/backg.jpg");
+  background-repeat: repeat-y;
   height: 6000px;
   width: 100%;
 }
 
 .enemy {
   position: absolute;
-  height: 75px;
+  height: 60px;
   width: 65px;
   left: 0;
   top: 0;
-  margin-left: -32px;
-  margin-top: -37px;
+  margin-left: -50px;
+  margin-top: -50px;
   background: blueviolet;
+  @include border-radius(40px);
+  background: url("/images/nsa.jpg");
+  background-origin: 20px;
+
 }
 
 .platform {

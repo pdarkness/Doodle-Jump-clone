@@ -2,7 +2,7 @@
 
 define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, Enemy, controls) {
 
-    var VIEWPORT_PADDING = 230;
+    var VIEWPORT_PADDING = 250;
 
     /**
      * Main game class.
@@ -49,8 +49,8 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         for(i=0;i<150-this.level*2;i++){
             //console.log(this.level(this.level));
             this.addPlatform(new Platform({
-                x: (Math.random()*1000*423)% 300,
-                y: (Math.random()*1000*593)%6200,
+                x: (Math.random()*1000*423)% 320,
+                y: (Math.random()*1000*593)%6000,
                 width: 80,
                 height: 10
             }));
@@ -58,11 +58,19 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
 
         for (i=0;i<2+this.level;i++){
             var mod = (Math.random()*1000*423)%400;
-            var modY = (Math.random()*1000*423)%6000;
-            this.addEnemy(new Enemy({
+            var modY = (Math.random()*1000*423)%5500;
+            if (new Date()%2===0){
+                this.addEnemy(new Enemy({
                 start: {x: mod, y: modY},
                 end: {x: mod-150, y: modY-100}
+
             }));
+            } else {
+                this.addEnemy(new Enemy({
+                    start: {x: mod, y: modY},
+                    end: {x: mod+130, y: modY}
+                }));
+            }
         }
 
         this.addPlatform(new Platform({
@@ -104,10 +112,10 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
     Game.prototype.levelOver = function() {
         this.freezeGame();
         this.gameScore += Math.floor(this.player.maxScore);
+
+
+        alert('Level '+ this.level +' Complete! Your Score now : ' + this.gameScore);
         this.level += 1;
-
-        alert('Level Complete! Your Score now : ' + this.gameScore);
-
         var game = this;
         setTimeout(function() {
             game.start();
@@ -119,7 +127,6 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
      */
     Game.prototype.onFrame = function() {
         if (!this.isPlaying) {
-
             return;
         }
 
@@ -146,35 +153,21 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
 
     Game.prototype.updateViewport = function() {
         var minY = this.viewport.y + VIEWPORT_PADDING;
-        var maxY = this.viewport.y + this.viewport.height ;
-
-        //var minX = this.viewport.x + VIEWPORT_PADDING;
-        //var maxX = this.viewport.x + this.viewport.width - VIEWPORT_PADDING;
+        var maxY = this.viewport.y + this.viewport.height + VIEWPORT_PADDING;
 
         var playerY = this.player.pos.y;
         var playerX = this.player.pos.x;
 
-        // Update the viewport if needed.
-        /*if (playerX < minX) {
-            this.viewport.x = playerX - VIEWPORT_PADDING;
-        } else if (playerX > maxX) {
-            this.viewport.x = playerX - this.viewport.width + VIEWPORT_PADDING;
-        }*/
-
-
         if (playerY < minY) {
             this.viewport.y = playerY - VIEWPORT_PADDING;
         } else if (playerY > maxY) {
-            this.viewport.y = playerY - this.viewport.height ;
+            this.viewport.y = playerY - this.viewport.height + VIEWPORT_PADDING;
         }
-
 
         this.worldEl.css({
             left: -this.viewport.x,
             top: -this.viewport.y
         });
-
-
     };
 
     /**
@@ -188,7 +181,7 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         // Set the stage.
         this.createWorld();
         this.player.reset();
-        this.viewport = {x: 0, y: 0, width: 400, height: 500};
+        this.viewport = {x: 0, y: 0, width: 400, height: 550};
 
         // Then start.
         this.unFreezeGame();

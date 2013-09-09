@@ -2,9 +2,9 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  margin-left: -30px;
-  margin-top: -100px;
-  width: 65px;
+  margin-left: -18px;
+  margin-top: -60px;
+  width: 35px;
   height: 60px;
 
   @include border-radius(10px);
@@ -18,7 +18,7 @@
     max-resolution: 12px;
 
     @include transform-origin(0, 0);
-    @include transform(scale(0.15, 0.15));
+    @include transform(scale(0.10, 0.10));
   }
   .head {
     width: 200px;
@@ -59,7 +59,7 @@
   .r_Eye {right: 50px; background: #000000;}
 
   .body{
-    width: 320px; height: 324px;
+    width: 320px; height: 224px;
     top: 40px;
 
     @include border-radius(50px 50px 25px 25px);
