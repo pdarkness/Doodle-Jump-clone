@@ -51,7 +51,7 @@
   }
 
   &.jumping .r_Eye {
-    top: 72px;
+    top: 92px;
     @include border-radius(50px);
   }
 
@@ -64,6 +64,14 @@
 
     @include border-radius(50px 50px 25px 25px);
   }
-  
+  &.left .body{
+     @include transform-origin(50%, 25px);
+     @include transform(rotate(-20deg));
+   }
+
+  &.right .body{
+    @include transform-origin(50%, 25px);
+    @include transform(rotate(20deg));
+  }
 
 }

@@ -6,7 +6,7 @@ define(function() {
     this.el = $('<div class="enemy"></div>');
 
     this.pos = {};
-    this.radius = 22;
+    this.radius = 12;
     this.start = options.start;
     this.end = options.end;
     this.duration = options.duration || 5;

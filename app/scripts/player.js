@@ -67,7 +67,8 @@ define(['controls'], function(controls) {
 
         // Update UI
         this.el.css('transform', 'translate3d(' + this.pos.x + 'px,' + this.pos.y + 'px,0)');
-
+        this.el.toggleClass('left', this.vel.x < 0);
+        this.el.toggleClass('right', this.vel.x > 0);
         this.el.toggleClass('jumping', this.vel.y < 0);
     };
 

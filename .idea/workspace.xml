@@ -3,23 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="94900833-ccf7-448f-a5b0-16d6838b16fc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/_player.scss" afterPath="$PROJECT_DIR$/app/styles/_player.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controls.js" afterPath="$PROJECT_DIR$/app/scripts/controls.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/game.js" afterPath="$PROJECT_DIR$/app/scripts/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/enemy.js" afterPath="$PROJECT_DIR$/app/scripts/enemy.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.scss" afterPath="$PROJECT_DIR$/app/styles/main.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/player.js" afterPath="$PROJECT_DIR$/app/scripts/player.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Doodle-Jump-clone.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378742306856" ignored="false" />
+    <file path="/Dummy.txt" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378767342386" ignored="false" />
     <file path="/main.scss" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378764842133" ignored="false" />
     <file path="/index.html" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378764602582" ignored="false" />
     <file path="$PROJECT_DIR$/../html5-game/app/scripts/enemy.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377732433951" ignored="false" />
-    <file path="/player.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378765090054" ignored="false" />
+    <file path="/player.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378768601844" ignored="false" />
     <file path="/game.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378765786797" ignored="false" />
     <file path="/platform.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1377797800526" ignored="false" />
-    <file path="/_player.scss" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378750178127" ignored="false" />
+    <file path="/_player.scss" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378769387310" ignored="false" />
     <file path="/bower.json" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378575805049" ignored="false" />
     <file path="/a.dummy" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378576158585" ignored="false" />
     <file path="/controls.js" changelist="94900833-ccf7-448f-a5b0-16d6838b16fc" time="1378763375278" ignored="false" />
@@ -42,10 +40,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="player.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="player.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="0" selection-start="1737" selection-end="1737" vertical-scroll-proportion="-1.1003861">
+            <state line="70" column="49" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -60,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="22" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
+            <state line="40" column="16" selection-start="574" selection-end="574" vertical-scroll-proportion="0.36100388">
               <folding />
             </state>
           </provider>
@@ -72,7 +70,7 @@
       <file leaf-file-name="_player.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/_player.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="14" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
+            <state line="61" column="32" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,13 +155,13 @@
         <option value="$PROJECT_DIR$/app/styles/_animations.scss" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/transf.txt" />
-        <option value="$PROJECT_DIR$/app/scripts/enemy.js" />
-        <option value="$PROJECT_DIR$/app/styles/_player.scss" />
         <option value="$PROJECT_DIR$/app/scripts/controls.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/styles/main.scss" />
-        <option value="$PROJECT_DIR$/app/scripts/player.js" />
         <option value="$PROJECT_DIR$/app/scripts/game.js" />
+        <option value="$PROJECT_DIR$/app/scripts/player.js" />
+        <option value="$PROJECT_DIR$/app/styles/_player.scss" />
+        <option value="$PROJECT_DIR$/app/scripts/enemy.js" />
+        <option value="$PROJECT_DIR$/app/styles/main.scss" />
       </list>
     </option>
   </component>
@@ -431,7 +429,11 @@
       <created>1378742310297</created>
       <updated>1378742310297</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Forever Jumping! Random platforms / enemy's">
+      <created>1378767353074</created>
+      <updated>1378767353074</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -499,7 +501,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gameplay improvments!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Forever Jumping! Random platforms / enemy's" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -525,6 +527,7 @@
     <MESSAGE value="orientation added game played on ipad and samsung s2 starting to get quite fun" />
     <MESSAGE value="milestone 2" />
     <MESSAGE value="Gameplay improvments!" />
+    <MESSAGE value="Forever Jumping! Random platforms / enemy's" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -584,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/enemy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -605,9 +601,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="0" selection-start="4123" selection-end="4123" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/_player.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="14" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
+        <state line="61" column="32" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="49" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/enemy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="19" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -621,21 +638,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="22" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="0" selection-start="4123" selection-end="4123" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="1737" selection-end="1737" vertical-scroll-proportion="-1.1003861">
+        <state line="40" column="16" selection-start="574" selection-end="574" vertical-scroll-proportion="0.36100388">
           <folding />
         </state>
       </provider>
