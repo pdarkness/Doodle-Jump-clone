@@ -21,6 +21,11 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         this.gameScore = 0;
         this.level = 1;
 
+        this.worldChunkSize = 1000;
+        this.worldFromY = 0;
+        this.worldToY = 1000;
+        this.nextCreatePlatformsY = 800;
+
         this.sound = new Howl({
             urls: ['/sounds/jump.mp3', '/sounds/jump.ogg']
         })
@@ -46,39 +51,16 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
 
     Game.prototype.createWorld = function() {
         // Ground
-        for(i=0;i<150-this.level*2;i++){
+        for(i=0;i<10-this.level;i++){
             //console.log(this.level(this.level));
             this.addPlatform(new Platform({
-                x: (Math.random()*1000*423)% 320,
-                y: (Math.random()*1000*593)%6000,
-                width: 80,
+                x: 0,
+                y: -i*100,
+                width: 400,
                 height: 10
             }));
         }
 
-        for (i=0;i<2+this.level;i++){
-            var mod = (Math.random()*1000*423)%400;
-            var modY = (Math.random()*1000*423)%5500;
-            if (new Date()%2===0){
-                this.addEnemy(new Enemy({
-                start: {x: mod, y: modY},
-                end: {x: mod-150, y: modY-100}
-
-            }));
-            } else {
-                this.addEnemy(new Enemy({
-                    start: {x: mod, y: modY},
-                    end: {x: mod+130, y: modY}
-                }));
-            }
-        }
-
-        this.addPlatform(new Platform({
-            x: 90,
-            y: 5900,
-            width: 600,
-            height: 10
-        }));
     };
 
     Game.prototype.addPlatform = function(platform) {
@@ -100,22 +82,11 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         else{
             alert('Game Over! Score: ' + (this.gameScore+ Math.floor(this.player.maxScore)));
         }
-        this.gameScore = 0;
-        this.level = 1;
+        this.worldChunkSize = 1000;
+        this.worldFromY = 0;
+        this.worldToY = 1000;
+        this.nextCreatePlatformsY = 800;
 
-        var game = this;
-        setTimeout(function() {
-            game.start();
-        }, 0);
-    };
-
-    Game.prototype.levelOver = function() {
-        this.freezeGame();
-        this.gameScore += Math.floor(this.player.maxScore);
-
-
-        alert('Level '+ this.level +' Complete! Your Score now : ' + this.gameScore);
-        this.level += 1;
         var game = this;
         setTimeout(function() {
             game.start();
@@ -128,6 +99,27 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
     Game.prototype.onFrame = function() {
         if (!this.isPlaying) {
             return;
+        }
+        //if(this.nextCreatePlatformsY < this.player.pos.y)
+        if(Math.abs(this.player.pos.y)>this.nextCreatePlatformsY){
+            this.nextCreatePlatformsY += this.worldChunkSize;
+            this.worldFromY += this.worldChunkSize;
+            this.worldToY += this.worldChunkSize;
+
+            for(i=0;i<20;i++){
+            this.addPlatform(new Platform({
+                x: Math.floor(Math.random() * (380+ (i+1)))%380,
+                y: -Math.floor(Math.random() * (this.worldToY - this.worldFromY + 1) + this.worldFromY),
+                width: 80,
+                height: 10
+            }));
+            }
+            var mod = (Math.random()*1000)%400;
+            var modY = (-Math.floor(Math.random() * (this.worldToY - this.worldFromY + 1) + this.worldFromY));
+                this.addEnemy(new Enemy({
+                    start: {x: mod, y: modY},
+                    end: {x: mod-150, y: modY}
+                }));
         }
 
         var now = +new Date() / 1000,
@@ -144,6 +136,8 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
                 this.entities.splice(i--, 1);
             }
         }
+
+
 
         this.updateViewport();
 

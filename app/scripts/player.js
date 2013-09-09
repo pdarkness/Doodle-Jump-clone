@@ -2,21 +2,23 @@
 
 define(['controls'], function(controls) {
 
-    var PLAYER_SPEED = 510;
+    var PLAYER_SPEED = 310;
     var JUMP_VELOCITY = 1450;
     var GRAVITY = 4000;
     var PLAYER_HALF_WIDTH = 14;
     var PLAYER_RADIUS = 30;
-    var HELL_Y = 6450;
+
 
 
     var Player = function(el, game) {
         this.game = game;
         this.el = el;
+
+        controls.on('super', this.onSuper.bind(this));
     };
 
     Player.prototype.reset = function() {
-        this.pos = { x: 100, y: 5900 };
+        this.pos = { x: 100, y: 0 };
         this.vel = { x: 0, y: 0 };
         this.playerScore = 0;
         this.maxScore = 0;
@@ -35,7 +37,7 @@ define(['controls'], function(controls) {
                 this.vel.y += 500;
             this.game.sound.play();
         }
-
+        //console.log(this.pos.y);
         if (this.pos.x < 0)
             this.pos.x = 400;
 
@@ -54,7 +56,7 @@ define(['controls'], function(controls) {
 
 
 
-        this.playerScore = Math.abs(oldY - 6000);
+        this.playerScore = Math.abs(oldY);
         if (this.playerScore > this.maxScore)
             this.maxScore = this.playerScore;
 
@@ -69,19 +71,22 @@ define(['controls'], function(controls) {
         this.el.toggleClass('jumping', this.vel.y < 0);
     };
 
+    Player.prototype.onSuper = function () {
+        if (this.game.vel.y ===0)
+            this.game.vel.y += 300;
+    }
+
     Player.prototype.checkGameOver = function() {
         /*if (this.pos.y > HELL_Y - Math.floor(this.maxScore)) {
             this.game.gameOver();
         }*/
-        console.log("viewport: " + this.game.viewport.y);
-        console.log("pos:    :" + this.pos.y);
-        console.log(this.pos.y- this.game.viewport.y);
+
         if (this.game.viewport.y != 0 && (this.pos.y- this.game.viewport.y)>this.game.viewport.height){
             this.game.gameOver();
         }
-        if (this.pos.y < 0) {
+        /*if (this.pos.y < 0) {
             this.game.levelOver();
-        }
+        }*/
     };
 
     Player.prototype.checkPlatforms = function(oldY) {
@@ -103,7 +108,7 @@ define(['controls'], function(controls) {
 
     Player.prototype.checkEnemies = function() {
         var centerX = this.pos.x;
-        var centerY = this.pos.y - 20;
+        var centerY = this.pos.y - 40;
         var that = this;
         this.game.forEachEnemy(function(enemy) {
             // Distance squared
