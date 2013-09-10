@@ -15,9 +15,10 @@ body {
 
 .gameOver {
   width: 100px;
-  height: 40px;
+  height: 400px;
   position: absolute;
-  background: #000000;
+  background: #ffffff;
+  margin-top: 500px;
 }
 
 .world {
@@ -26,7 +27,6 @@ body {
 
 .background {
   background: url("/images/backg.jpg");
-  background-repeat: repeat-y;
   height: 6000px;
   width: 100%;
 }
@@ -38,12 +38,22 @@ body {
   left: 0;
   top: 0;
   margin-left: -30px;
-  margin-top: -30px;
+  margin-top: 0px;
   background: blueviolet;
   @include border-radius(40px);
   background: url("/images/nsa.jpg");
   background-origin: 20px;
 
+}
+
+.coin {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 0;
+  left: 0;
+  background: yellow;
+  @include border-radius(10px);
 }
 
 .platform {

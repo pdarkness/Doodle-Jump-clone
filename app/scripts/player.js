@@ -2,7 +2,7 @@
 
 define(['controls'], function(controls) {
 
-    var PLAYER_SPEED = 310;
+    var PLAYER_SPEED = 350;
     var JUMP_VELOCITY = 1450;
     var GRAVITY = 4000;
     var PLAYER_HALF_WIDTH = 14;
@@ -57,11 +57,13 @@ define(['controls'], function(controls) {
 
 
         this.playerScore = Math.abs(oldY);
+        this.checkCoins(oldY);
         if (this.playerScore > this.maxScore)
             this.maxScore = this.playerScore;
 
         // Collision detection
         this.checkPlatforms(oldY);
+
         this.checkEnemies();
         this.checkGameOver();
 
@@ -73,8 +75,7 @@ define(['controls'], function(controls) {
     };
 
     Player.prototype.onSuper = function () {
-        if (this.game.vel.y ===0)
-            this.game.vel.y += 300;
+        this.vel.y -= 300;
     }
 
     Player.prototype.checkGameOver = function() {
@@ -102,6 +103,20 @@ define(['controls'], function(controls) {
                     // COLLISION. Let's stop gravity.
                     that.pos.y = p.rect.y;
                     that.vel.y = 0;
+                }
+            }
+        });
+    };
+
+    Player.prototype.checkCoins = function(oldY) {
+        var that = this;
+        this.game.forEachCoin(function(p) {
+            // Are we crossing Y.
+            if (p.rect.y >= oldY && p.rect.y < that.pos.y) {
+
+                // Are inside X bounds.
+                if (that.pos.x + PLAYER_HALF_WIDTH >= p.rect.x && that.pos.x - PLAYER_HALF_WIDTH <= p.rect.right) {
+                    that.playerScore += 5000;
                 }
             }
         });

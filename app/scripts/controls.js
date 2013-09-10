@@ -56,9 +56,6 @@ define([], function() {
         if (e.keyCode in KEYS) {
             var keyName = KEYS[e.keyCode];
             this.keys[keyName] = true;
-
-            if(keyName === 'space')
-                this.emit('super')
             return false;
         }
     };
@@ -82,7 +79,6 @@ define([], function() {
             this.inputVec.x = this.tilt;
         }
     };
-
 
     // Export singleton.
     return new Controls();

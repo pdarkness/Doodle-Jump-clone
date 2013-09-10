@@ -1,8 +1,8 @@
 /*global define, $ */
 
-define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, Enemy, controls) {
+define(['player', 'platform', 'coin', 'enemy', 'controls'], function(Player, Platform, Coin, Enemy, controls) {
 
-    var VIEWPORT_PADDING = 250;
+    var VIEWPORT_PADDING = 220;
 
     /**
      * Main game class.
@@ -15,11 +15,13 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         this.entities = [];
         this.platformsEl = el.find('.platforms');
         this.entitiesEl = el.find('.entities');
+        this.coinsEl = el.find('.coins');
         this.worldEl = el.find('.world');
         this.gameOvEl = el.find('.gameOver');
         this.isPlaying = false;
         this.gameScore = 0;
         this.level = 1;
+        this.bonus = 0;
 
         this.worldChunkSize = 1000;
         this.worldFromY = 0;
@@ -68,6 +70,11 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
         this.platformsEl.append(platform.el);
     };
 
+    Game.prototype.addCoin = function(coin) {
+        this.entities.push(coin);
+        this.coinsEl.append(coin.el);
+    };
+
     Game.prototype.addEnemy = function(enemy) {
         this.entities.push(enemy);
         this.entitiesEl.append(enemy.el);
@@ -113,13 +120,18 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
                 width: 80,
                 height: 10
             }));
+
             }
             var mod = (Math.random()*1000)%400;
             var modY = (-Math.floor(Math.random() * (this.worldToY - this.worldFromY + 1) + this.worldFromY));
-                this.addEnemy(new Enemy({
-                    start: {x: mod, y: modY},
-                    end: {x: mod-150, y: modY}
-                }));
+            this.addEnemy(new Enemy({
+                start: {x: mod, y: modY},
+                end: {x: mod-150, y: modY}
+            }));
+            this.addCoin(new Coin({
+                x: Math.floor(Math.random() * (380+ (i+1)))%380,
+                y: modY
+            }));
         }
 
         var now = +new Date() / 1000,
@@ -179,6 +191,15 @@ define(['player', 'platform', 'enemy', 'controls'], function(Player, Platform, E
 
         // Then start.
         this.unFreezeGame();
+    };
+
+
+    Game.prototype.forEachCoin = function(handler) {
+        for (var i = 0, e; e = this.entities[i]; i++) {
+            if (e instanceof Coin) {
+                handler(e);
+            }
+        }
     };
 
     Game.prototype.forEachPlatform = function(handler) {
