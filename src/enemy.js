@@ -1,10 +1,14 @@
 import { createEl } from './dom.js';
 
+// Ellipse fitted to the face in enemy.webp at its on-screen size (see .enemy in
+// style.css), relative to the enemy's position. It covers 93% of the face's
+// pixels, and 93% of its area is face.
+const HITBOX = { offsetX: -1, offsetY: -1, rx: 33, ry: 29.5 };
+
 export default class FloatingEnemy {
     constructor(options) {
         this.el = createEl('enemy');
         this.pos = { x: options.start.x, y: options.start.y };
-        this.radius = 12;
         this.start = options.start;
         this.end = options.end;
         this.duration = options.duration || 5;
@@ -15,6 +19,19 @@ export default class FloatingEnemy {
 
     get bottomY() {
         return Math.max(this.start.y, this.end.y);
+    }
+
+    /**
+     * The hitbox ellipse in world coordinates, mirrored along with the sprite.
+     */
+    get hitbox() {
+        const offsetX = this.facingLeft ? -HITBOX.offsetX : HITBOX.offsetX;
+        return {
+            x: this.pos.x + offsetX,
+            y: this.pos.y + HITBOX.offsetY,
+            rx: HITBOX.rx,
+            ry: HITBOX.ry,
+        };
     }
 
     onFrame(delta) {
