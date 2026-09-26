@@ -8,6 +8,9 @@ import { nextPlatformRect, WORLD_WIDTH, PLATFORM_HEIGHT } from './level.js';
 const VIEWPORT_PADDING = 220;
 // Keep platforms generated this far above the top of the screen.
 const GENERATE_AHEAD = 600;
+// How far enemies float sideways, and half the sprite width (see .enemy in style.css).
+const ENEMY_SWING = 150;
+const ENEMY_HALF_WIDTH = 36;
 // Cap the frame delta so a backgrounded tab doesn't make the player tunnel through platforms.
 const MAX_DELTA = 1 / 20;
 // Ignore restart input for a moment so a held key doesn't skip the game-over screen.
@@ -88,11 +91,13 @@ export default class Game {
     createChunkExtras(chunkBottomY) {
         const randomY = () => chunkBottomY - Math.floor(Math.random() * this.worldChunkSize);
 
-        const enemyX = Math.random() * WORLD_WIDTH;
+        // Keep the whole swing, sprite included, on screen.
+        const minX = ENEMY_SWING + ENEMY_HALF_WIDTH;
+        const enemyX = minX + Math.random() * (WORLD_WIDTH - ENEMY_HALF_WIDTH - minX);
         const enemyY = randomY();
         this.addEnemy(new Enemy({
             start: { x: enemyX, y: enemyY },
-            end: { x: enemyX - 150, y: enemyY },
+            end: { x: enemyX - ENEMY_SWING, y: enemyY },
         }));
 
         this.addCoin(new Coin({
