@@ -2,10 +2,12 @@ import controls from './controls.js';
 import { playJump } from './sound.js';
 import { COIN_BONUS } from './coin.js';
 
-const PLAYER_SPEED = 350;
-const JUMP_VELOCITY = 1450;
-const GRAVITY = 4000;
-const PLAYER_HALF_WIDTH = 14;
+export const PLAYER_SPEED = 350;
+export const JUMP_VELOCITY = 1450;
+export const GRAVITY = 4000;
+export const PLAYER_HALF_WIDTH = 14;
+// Peak height of a normal jump: v² / 2g.
+export const MAX_JUMP_HEIGHT = (JUMP_VELOCITY * JUMP_VELOCITY) / (2 * GRAVITY);
 const PLAYER_RADIUS = 30;
 const WORLD_WIDTH = 400;
 
