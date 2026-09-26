@@ -1,12 +1,21 @@
 import controls from './controls.js';
 import { playJump } from './sound.js';
 import { COIN_BONUS } from './coin.js';
+import { ellipseIntersectsRect } from './collision.js';
 
-const PLAYER_SPEED = 350;
-const JUMP_VELOCITY = 1450;
-const GRAVITY = 4000;
-const PLAYER_HALF_WIDTH = 14;
+export const PLAYER_SPEED = 350;
+export const JUMP_VELOCITY = 1450;
+export const GRAVITY = 4000;
+export const PLAYER_HALF_WIDTH = 14;
+// Peak height of a normal jump: v² / 2g.
+export const MAX_JUMP_HEIGHT = (JUMP_VELOCITY * JUMP_VELOCITY) / (2 * GRAVITY);
 const PLAYER_RADIUS = 30;
+// The doodle's visible head and body, relative to its position (the feet),
+// measured from the rendered page.
+const HITBOXES = [
+    { left: -13, right: 7, top: -47, bottom: -17 },
+    { left: -18, right: 14, top: -16, bottom: 6 },
+];
 const WORLD_WIDTH = 400;
 
 export default class Player {
@@ -100,14 +109,23 @@ export default class Player {
 
     checkEnemies() {
         this.game.forEachEnemy((enemy) => {
-            if (this.touches(enemy.pos, enemy.radius)) {
+            if (this.hitsEllipse(enemy.hitbox)) {
                 this.game.gameOver();
             }
         });
     }
 
+    hitsEllipse(ellipse) {
+        return HITBOXES.some((box) => ellipseIntersectsRect(ellipse, {
+            left: this.pos.x + box.left,
+            right: this.pos.x + box.right,
+            top: this.pos.y + box.top,
+            bottom: this.pos.y + box.bottom,
+        }));
+    }
+
     /**
-     * Circle-vs-circle test against the player's body.
+     * Circle-vs-circle test against the player, used for picking up coins.
      */
     touches(point, radius) {
         const distanceX = point.x - this.pos.x;

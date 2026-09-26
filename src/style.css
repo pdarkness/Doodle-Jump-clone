@@ -71,14 +71,13 @@ body {
 
 .enemy {
     position: absolute;
-    height: 60px;
-    width: 65px;
+    width: 72px;
+    height: 59px;
     left: 0;
     top: 0;
-    margin-left: -30px;
+    margin-left: -36px;
     margin-top: -30px;
-    background: blueviolet;
-    border-radius: 40px;
+    background: url("./assets/enemy.webp") center / contain no-repeat;
 }
 
 .coin {

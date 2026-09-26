@@ -3,10 +3,14 @@ import Platform from './platform.js';
 import Coin from './coin.js';
 import Enemy from './enemy.js';
 import controls from './controls.js';
+import { nextPlatformRect, WORLD_WIDTH, PLATFORM_HEIGHT } from './level.js';
 
 const VIEWPORT_PADDING = 220;
-const WORLD_WIDTH = 400;
-const PLATFORM_WIDTH = 80;
+// Keep platforms generated this far above the top of the screen.
+const GENERATE_AHEAD = 600;
+// How far enemies float sideways, and half the sprite width (see .enemy in style.css).
+const ENEMY_SWING = 150;
+const ENEMY_HALF_WIDTH = 36;
 // Cap the frame delta so a backgrounded tab doesn't make the player tunnel through platforms.
 const MAX_DELTA = 1 / 20;
 // Ignore restart input for a moment so a held key doesn't skip the game-over screen.
@@ -56,35 +60,44 @@ export default class Game {
                 x: 0,
                 y: -i * 100,
                 width: WORLD_WIDTH,
-                height: 10,
+                height: PLATFORM_HEIGHT,
             }));
+        }
+        this.generatePlatforms();
+    }
+
+    /**
+     * Adds platforms above the highest one until the area above the screen is filled.
+     * Each new platform is placed relative to the previous one, so there is never
+     * a gap too big to jump.
+     */
+    generatePlatforms() {
+        const targetY = this.viewport.y - GENERATE_AHEAD;
+        while (this.highestPlatform.rect.y > targetY) {
+            this.addPlatform(new Platform(nextPlatformRect(this.highestPlatform.rect)));
+
+            // One enemy and one coin per chunk of world.
+            if (this.highestPlatform.rect.y < this.nextChunkY) {
+                this.createChunkExtras(this.nextChunkY);
+                this.nextChunkY -= this.worldChunkSize;
+            }
         }
     }
 
     /**
-     * Fills the next chunk of world above the player with platforms, an enemy and a coin.
+     * Places an enemy and a coin somewhere in the chunk starting at `chunkBottomY`
+     * and extending one chunk upwards.
      */
-    createChunk() {
-        this.nextCreatePlatformsY += this.worldChunkSize;
-        this.worldFromY += this.worldChunkSize;
-        this.worldToY += this.worldChunkSize;
+    createChunkExtras(chunkBottomY) {
+        const randomY = () => chunkBottomY - Math.floor(Math.random() * this.worldChunkSize);
 
-        const randomY = () => -Math.floor(Math.random() * (this.worldToY - this.worldFromY + 1) + this.worldFromY);
-
-        for (let i = 0; i < 20; i++) {
-            this.addPlatform(new Platform({
-                x: Math.floor(Math.random() * (WORLD_WIDTH - PLATFORM_WIDTH)),
-                y: randomY(),
-                width: PLATFORM_WIDTH,
-                height: 10,
-            }));
-        }
-
-        const enemyX = Math.random() * WORLD_WIDTH;
+        // Keep the whole swing, sprite included, on screen.
+        const minX = ENEMY_SWING + ENEMY_HALF_WIDTH;
+        const enemyX = minX + Math.random() * (WORLD_WIDTH - ENEMY_HALF_WIDTH - minX);
         const enemyY = randomY();
         this.addEnemy(new Enemy({
             start: { x: enemyX, y: enemyY },
-            end: { x: enemyX - 150, y: enemyY },
+            end: { x: enemyX - ENEMY_SWING, y: enemyY },
         }));
 
         this.addCoin(new Coin({
@@ -94,6 +107,7 @@ export default class Game {
     }
 
     addPlatform(platform) {
+        this.highestPlatform = platform;
         this.entities.push(platform);
         this.platformsEl.append(platform.el);
     }
@@ -148,10 +162,6 @@ export default class Game {
             return;
         }
 
-        if (Math.abs(this.player.pos.y) > this.nextCreatePlatformsY) {
-            this.createChunk();
-        }
-
         const now = performance.now() / 1000;
         const delta = Math.min(now - this.lastFrame, MAX_DELTA);
         this.lastFrame = now;
@@ -174,6 +184,7 @@ export default class Game {
         }
 
         this.updateViewport();
+        this.generatePlatforms();
         this.scoreEl.textContent = String(this.score);
 
         // Request next frame.
@@ -204,15 +215,13 @@ export default class Game {
         this.entities.forEach((e) => e.el.remove());
         this.entities = [];
         this.gameScore = 0;
-        this.worldFromY = 0;
-        this.worldToY = this.worldChunkSize;
-        this.nextCreatePlatformsY = 800;
+        this.nextChunkY = -this.worldChunkSize;
         this.overlayEl.hidden = true;
 
         // Set the stage.
+        this.viewport = { x: 0, y: 0, width: WORLD_WIDTH, height: 550 };
         this.createWorld();
         this.player.reset();
-        this.viewport = { x: 0, y: 0, width: WORLD_WIDTH, height: 550 };
 
         // Then start.
         this.unFreezeGame();

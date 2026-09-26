@@ -74,6 +74,44 @@ describe('Player', () => {
         expect(game.over).toBe(true);
     });
 
+    describe('enemy hitbox', () => {
+        // A stationary enemy; its hitbox ellipse is centered at (x - 1, y - 1) with radii 33 x 29.5.
+        const enemyAt = (x, y) => new Enemy({ start: { x, y }, end: { x, y } });
+
+        beforeEach(() => {
+            player.pos = { x: 200, y: -500 };
+        });
+
+        it('hits when the edge of the face touches the side of the body', () => {
+            // Body spans x 182..214 and y -516..-494.
+            expect(player.hitsEllipse(enemyAt(246, -505).hitbox)).toBe(true);
+            expect(player.hitsEllipse(enemyAt(252, -505).hitbox)).toBe(false);
+        });
+
+        it('hits when the bottom of the face touches the top of the head', () => {
+            // Head top is at y -547.
+            expect(player.hitsEllipse(enemyAt(200, -572).hitbox)).toBe(true);
+            expect(player.hitsEllipse(enemyAt(200, -580).hitbox)).toBe(false);
+        });
+
+        it('misses near a corner where only the bounding boxes overlap', () => {
+            // Diagonally off the head's top-right corner (207, -547).
+            expect(player.hitsEllipse(enemyAt(233, -568).hitbox)).toBe(false);
+        });
+
+        it('mirrors the hitbox with the sprite', () => {
+            const enemy = new Enemy({ start: { x: 300, y: -500 }, end: { x: 150, y: -500 } });
+            // Starts out moving left, then turns around halfway through its cycle.
+            expect(enemy.facingLeft).toBe(true);
+            expect(enemy.hitbox.x - enemy.pos.x).toBe(1);
+
+            enemy.onFrame(enemy.duration / 2);
+
+            expect(enemy.facingLeft).toBe(false);
+            expect(enemy.hitbox.x - enemy.pos.x).toBe(-1);
+        });
+    });
+
     it('wraps around the screen edges', () => {
         player.pos = { x: -1, y: -500 };
         player.vel = { x: 0, y: -1 };
